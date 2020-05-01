@@ -4,7 +4,9 @@
   "description": "Sample project for demoing and testing mocha.el capabilities",
   "main": "lib/mocha-sample.js",
   "scripts": {
-    "test": "$(npm bin)/mocha"
+    "test": "$(npm bin)/mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Al Scott",
   "license": "MIT",
@@ -12,5 +14,9 @@
     "chai": "^3.5.0",
     "eslint": "^2.10.1",
     "mocha": "^2.4.5"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.316.1"
   }
 }
